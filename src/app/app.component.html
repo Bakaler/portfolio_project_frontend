@@ -227,6 +227,12 @@
       </svg>
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
+        <h2>Weather Forecast</h2>
+        <ul>
+          <li *ngFor="let item of forecast">
+            {{ item.date }} - {{ item.summary }} - {{ item.temperatureC }}°C
+          </li>
+        </ul>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
