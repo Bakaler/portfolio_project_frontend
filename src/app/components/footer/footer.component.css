@@ -1,0 +1,31 @@
+.app-footer {
+  background: 
+    linear-gradient(to left, #FF6F61, transparent),
+    linear-gradient(to bottom, #e1b00e, transparent);
+  color: white;
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+a, a:visited, a:hover, a:active {
+  color: rgb(255, 247, 0);           /* or your preferred color */
+  text-decoration: none;  /* or underline if you want */
+}

@@ -1,0 +1,12 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    linear-gradient(to right, #001F3F, transparent),
+    linear-gradient(to bottom, #FF6F61, transparent);
+  background-blend-mode: screen;
+  z-index: -1; /* behind other content */
+}

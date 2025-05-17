@@ -1,0 +1,22 @@
+.app-header {
+  /* background-color: #282c34;
+   */
+  background: 
+    linear-gradient(to right, rgba(82, 131, 144, 0.807), transparent),
+    linear-gradient(to bottom, #001F3F, transparent);
+  color: white;
+  padding: .25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
