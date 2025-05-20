@@ -1,0 +1,14 @@
+.calculator-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem; /* space between calculator and other content */
+}
+
+.calculator-wrapper {
+  flex: 0 0 auto; /* prevents calculator from stretching */
+  width: 300px; /* or whatever size your calculator needs */
+}
+
+.other-content {
+  flex: 1;
+}

@@ -1,0 +1,78 @@
+
+<div class="calculator">
+  <div class="equation">
+    
+    {{ equation_line }}
+
+  </div>
+  <div class="result">
+    
+    {{ command_line }}
+
+  </div>
+  <div class="buttons">
+    <button (click)="onCalculatorButtonClick('2nd')">2nd</button>
+    <button (click)="onCalculatorButtonClick('1/x')">1/x</button>
+    <button (click)="onCalculatorButtonClick('|x|')">|x|</button>
+    <button (click)="onCalculatorButtonClick('C')">C</button>
+    <button (click)="onCalculatorButtonClick('Delete')">Delete</button>
+
+    <button (click)="onCalculatorButtonClick('sqrt()')">sqrt()</button>
+    <button (click)="onCalculatorButtonClick('(')">(</button>
+    <button (click)="onCalculatorButtonClick(')')">)</button>
+    <button (click)="onCalculatorButtonClick('n!')">n!</button>
+    <button (click)="onCalculatorButtonClick('/')">/</button>
+
+    <button (click)="onCalculatorButtonClick('x^y')">x^y</button>
+    <button (click)="onCalculatorButtonClick('7')">7</button>
+    <button (click)="onCalculatorButtonClick('8')">8</button>
+    <button (click)="onCalculatorButtonClick('9')">9</button>
+    <button (click)="onCalculatorButtonClick('*')">*</button>
+
+    <button (click)="onCalculatorButtonClick('10^y')">10^y</button>
+    <button (click)="onCalculatorButtonClick('4')">4</button>
+    <button (click)="onCalculatorButtonClick('5')">5</button>
+    <button (click)="onCalculatorButtonClick('6')">6</button>
+    <button (click)="onCalculatorButtonClick('-')">-</button>
+
+    <button (click)="onCalculatorButtonClick('log(n)')">log(n)</button>
+    <button (click)="onCalculatorButtonClick('1')">1</button>
+    <button (click)="onCalculatorButtonClick('2')">2</button>
+    <button (click)="onCalculatorButtonClick('3')">3</button>
+    <button (click)="onCalculatorButtonClick('+')">+</button>
+
+    <button (click)="onCalculatorButtonClick('x^2')">x^2</button>
+    <button (click)="onCalculatorButtonClick('+/-')">+/-</button>
+    <button (click)="onCalculatorButtonClick('0')">0</button>
+    <button (click)="onCalculatorButtonClick('.')">.</button>
+    <button (click)="onCalculatorButtonClick('=')">=</button>
+  </div>
+</div>
+
+<!-- <div class="calculator">
+  <div class="display">{{ displayValue }}</div>
+
+  <div class="buttons">
+    <button (click)="clear()">C</button>
+    <button (click)="appendOperator('/')">÷</button>
+    <button (click)="appendOperator('*')">×</button>
+    <button (click)="appendOperator('-')">−</button>
+
+    <button (click)="appendNumber('7')">7</button>
+    <button (click)="appendNumber('8')">8</button>
+    <button (click)="appendNumber('9')">9</button>
+    <button (click)="appendOperator('+')">+</button>
+
+    <button (click)="appendNumber('4')">4</button>
+    <button (click)="appendNumber('5')">5</button>
+    <button (click)="appendNumber('6')">6</button>
+    <button class="equal" rowspan="2" (click)="calculate()">=</button>
+
+    <button (click)="appendNumber('1')">1</button>
+    <button (click)="appendNumber('2')">2</button>
+    <button (click)="appendNumber('3')">3</button>
+
+    <button class="zero" (click)="appendNumber('0')">0</button>
+    <button (click)="appendDecimal()">.</button>
+  </div>
+</div> -->

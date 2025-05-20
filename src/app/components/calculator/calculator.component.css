@@ -1,0 +1,91 @@
+.calculator {
+  width: 20rem;
+  margin: 1rem auto;
+  border: 2px solid #462424;
+  border-radius: 10px;
+  background: 
+      linear-gradient(to right, #06031d, transparent),
+      linear-gradient(to left, #1f3439, transparent);
+  box-shadow: 0 0 12px #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.equation {
+  background:
+      linear-gradient(to right, #000000, transparent),
+      linear-gradient(to left, #303030, transparent);
+  color: #0f0;
+  font-size: 1.25rem;
+  padding: .25rem .55rem;
+  text-align: right;
+  border-bottom: .25rem solid #333;
+  border-radius: 1rem;
+  user-select: none;
+  height: 2.25rem;
+  overflow-x: auto;
+}
+
+.result {
+  background:       
+    linear-gradient(to right, #000000, transparent),
+    linear-gradient(to left, #332932, transparent);
+  color: #0f0;
+  font-size: 1.75rem;
+  padding: 1rem 1rem;
+  text-align: right;
+  border-bottom: .25rem solid #333;
+  border-radius: 1rem 1rem 0 0;
+  user-select: none;
+  height: 2.5rem;
+  overflow-x: auto;
+}
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  padding: .5rem;
+  
+}
+
+button {
+  background: #444;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.05rem;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  user-select: none;
+  height: 3rem;
+  box-shadow: 0 0 12px #420b0b;
+
+}
+
+button:hover {
+  background: #666;
+}
+
+button:active {
+  background: #222;
+}
+
+/* Make the zero button span two columns */
+.zero {
+  grid-column: span 1;
+}
+
+/* Style the equals button taller */
+.equal {
+  grid-row: span 1;
+  background: #0a84ff;
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.equal:hover {
+  background: #0066ff;
+}

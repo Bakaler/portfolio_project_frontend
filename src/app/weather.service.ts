@@ -11,6 +11,7 @@ export class WeatherService {
   constructor(private http: HttpClient) {}
 
   getForecast(): Observable<any> {
+    console.log('Fetching weather forecast from backend...');
     return this.http.get(this.apiUrl);
   }
 }

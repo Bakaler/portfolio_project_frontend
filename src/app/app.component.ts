@@ -5,13 +5,11 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BackgroundComponent } from './components/background/background.component';
-import { AboutComponent } from './components/about/about.component';
-import { HomeComponent } from './pages/home/home.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HeaderComponent, FooterComponent, BackgroundComponent, AboutComponent, HomeComponent],
+  imports: [RouterOutlet, CommonModule, HeaderComponent, FooterComponent, BackgroundComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
