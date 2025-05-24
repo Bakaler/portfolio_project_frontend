@@ -1,0 +1,97 @@
+<div class="ebnf-lesson">
+  <h2 class="section-title"><u>EBNF Parsing Calculator</u></h2>
+
+  <p><strong>EBNF (Extended Backus-Naur Form)</strong> is a notation used to formally describe the structure of 
+  grammar wether that be programming languages, math, or English.</p>
+
+  <p><strong>At</strong> its core, EBNF defines what counts as a "valid sentence" in a given language. 
+    It breaks down complex expressions into nested rules. </p>
+
+  <h3>Real-World EBNF in Action</h3>
+  <p><strong>Natural Language Example:</strong><br>
+  Consider the famous phrase: <br>
+  <em><strong>"Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo."</strong></em><br>
+  It’s a grammatically correct English sentence no matter how non-sensical it may sound. 
+  <br>To understand how this works, we can look at a rough diagram of English grammar:</p>      
+    <pre><code>
+        sentence    = noun_phrase , verb_phrase ;
+        noun_phrase = [ determiner ] , {{ "{" }} adjective {{ "}" }} , noun , [ r_c ] ;
+        verb_phrase = verb , [ noun_phrase ] ;
+        r_c         = r_p , verb_phrase ;
+        determiner  = "the" | "a" | "an" | "this" | "that" ;
+        adjective   = "Buffalo" | ... ; {{"<"}}--- (1) Buffalo (3) Buffalo (7) Buffalo
+        noun        = "buffalo" | ... ; {{"<"}}--- (2) buffalo (4) buffalo (8) buffalo 
+        verb        = "buffalo" | ... ; {{"<"}}--- (5) buffalo (6) buffalo
+        r_p         = "who" | "that" | "which" ;
+  </code></pre>
+  <p><strong>With that, we can break down the sentence:</strong><br>
+  <pre><code>   
+                              sentence
+                            |         ||
+                  noun_phrase         verb_phrase 
+                  ||        |         ||       |
+            noun_phrase    r_c        verb   noun_phrase
+            ||    ||      |   |       ||       |       |
+           adj   noun   adj   noun    ||      adj     noun
+           ||     ||     |     |      ||       |       |
+      Buffalo buffalo Buffalo buffalo buffalo Buffalo buffalo
+  </code></pre>
+
+  <h2><u>EBNF in My Calculator</u></h2>
+  <p>My calculator uses an EBNF-style grammar to evaluate expressions such as:</p>
+
+  <pre><code>    (2 + 3) * 4 ** 2 % 5
+    ((0.12**log(5))) % abs((2+1)/sqrt(2))
+    ((((((((((0))))))))))
+    1 + 1</code></pre>
+
+  <p><strong>These equations are determined by the following grammar:</strong></p>
+  <pre><code>         _exp:=
+            =
+            exp '+' term
+            exp '-' term
+            term
+        _term ::=
+            term '*' factor
+            term '/' factor
+            term '//' factor
+            term '%' factor
+            factor
+        _factor ::=
+            '(' exp ')'
+            power
+        _power ::=
+            digit '**' factor
+            function
+        _function ::=
+            [digit | function ] [abs | sqrt | 1/x | n! | 10^y | x^y | log | neg]
+            digit
+        _digit :: =
+            int '.' int
+            int
+        _int ::=
+            int int
+            [0 | 1 | 2 | ... | 9]</code></pre>
+
+  <h3>And it understands in real time...</h3>
+  <p>The calculator uses EBNF not only to verify the structure of an equation, 
+    but also to evaluate user input in real time, parsing even incomplete expressions to check if they follow the expected pattern.
+  </p>
+  <p>
+    Dont believe me? Try entering something like
+  </p>
+  <pre><code>  1 ++ 0
+  ) 2 (
+  1.1.1.1.1
+  9 ** ** 2log() abc</code></pre>
+
+  <p>
+    This live parsing, combined with evaluation parsing, gives the calculator a robust 
+    and user-friendly way to guide input and ensure correctness as users type.
+  </p>
+
+  <br>
+  <h4>We follow these unwritten universal rules—shaping how we speak, write, and solve problems and yet most of us never realize they’re even there.</h4>
+
+
+</div>
